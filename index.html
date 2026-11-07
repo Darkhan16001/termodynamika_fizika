@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081326">
+
+  <title>
+    Термодинамиканың бірінші заңы | Physics Lab
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- НЕГІЗГІ БЕТ -->
+  <main class="main">
+
+    <header class="hero">
+      <div class="eyebrow">
+        ⚡ ФИЗИКА • 1 КУРС
+      </div>
+
+      <h1>Термодинамиканың бірінші заңы</h1>
+
+      <p>
+        Ішкі энергия, жылу мөлшері,
+        газдың жұмысы, изопроцестер және
+        энергияның сақталуы.
+      </p>
+
+      <div class="chips">
+        <span>⏱ 80 минут</span>
+        <span>🖼 8 түсіндірме</span>
+        <span>📝 18 есеп</span>
+        <span>🏆 8 ойын кезеңі</span>
+        <span>🥇 3 команда</span>
+      </div>
+    </header>
+
+    <!-- ТАҚЫРЫП АТАУЫ -->
+    <div class="heading">
+      <span id="stageTag">01 / ТҮСІНДІРУ</span>
+      <h2 id="stageTitle">Тақырыпты түсіндіру</h2>
+      <p id="stageDescription">
+        Формулалар және көрнекі суреттер
+      </p>
+    </div>
+
+    <!-- ТҮСІНДІРУ / ВИДЕО / ЕСЕП / ОЙЫН -->
+    <div id="screen">
+      <div class="card">
+        <h2>Сабақ жүктелуде...</h2>
+      </div>
+    </div>
+
+    <footer>
+      ⚡ PHYSICS LAB • BY DARKHAN
+    </footer>
+  </main>
+
+  <!-- БАРЛЫҚ БАСҚАРУ ОҢ ЖАҚТА -->
+  <aside class="sidebar">
+
+    <div class="side-card">
+      <h3>📚 Бөлімдер</h3>
+
+      <nav class="navigation">
+
+        <button class="nav-btn active" data-stage="0">
+          <span class="nav-icon">📖</span>
+          <span class="nav-label">Түсіндіру</span>
+        </button>
+
+        <button class="nav-btn" data-stage="1">
+          <span class="nav-icon">🎬</span>
+          <span class="nav-label">Видео</span>
+        </button>
+
+        <button class="nav-btn" data-stage="2">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">Конспект</span>
+        </button>
+
+        <button class="nav-btn" data-stage="3">
+          <span class="nav-icon">🧮</span>
+          <span class="nav-label">Есептер</span>
+        </button>
+
+        <button class="nav-btn" data-stage="4">
+          <span class="nav-icon">🏆</span>
+          <span class="nav-label">Ойындар</span>
+        </button>
+
+        <button class="nav-btn" data-stage="5">
+          <span class="nav-icon">🥇</span>
+          <span class="nav-label">Қорытынды</span>
+        </button>
+
+      </nav>
+    </div>
+
+    <!-- ТАЙМЕР -->
+    <div class="side-card timer-card">
+      <h3>⏱ Уақыт</h3>
+
+      <div id="timer">25:00</div>
+
+      <small id="timerStatus">
+        Уақыт жүріп жатыр
+      </small>
+
+      <div class="timer-actions">
+        <button id="pauseTimer" title="Тоқтату">
+          ⏸
+        </button>
+
+        <button id="resetTimer" title="Қайта бастау">
+          ↻
+        </button>
+      </div>
+    </div>
+
+    <!-- КЕЛЕСІ / АРТҚА / YOUTUBE -->
+    <div class="side-card controls">
+      <h3>Басқару</h3>
+
+      <button id="prevButton" class="btn secondary">
+        ← <span>Артқа</span>
+      </button>
+
+      <button id="nextButton" class="btn primary">
+        ➜ <span>Келесі</span>
+      </button>
+
+      <a class="btn youtube"
+         href="https://www.youtube.com/results?search_query=Термодинамиканың+бірінші+заңы+қазақша"
+         target="_blank"
+         rel="noopener noreferrer">
+        ▶ <span>YouTube</span>
+      </a>
+    </div>
+
+    <!-- ПРОГРЕСС -->
+    <div class="side-card">
+      <small>Сабақ барысы</small>
+
+      <div class="progress">
+        <div id="overallProgress"></div>
+      </div>
+
+      <small id="stageCounter">
+        1 / 6 бөлім
+      </small>
+    </div>
+
+  </aside>
+</div>
+
+<!-- БАРЛЫҚ БЕТТЕ АШЫЛАТЫН КАЛЬКУЛЯТОР -->
+<button id="calcToggle" class="calc-toggle"
+        aria-expanded="false">
+  🧮 Калькулятор
+</button>
+
+<div id="calcPanel" class="calc-panel" hidden>
+
+  <div class="calc-header">
+    <h3>🧮 Калькулятор</h3>
+
+    <button id="calcClose" title="Жабу">
+      ✕
+    </button>
+  </div>
+
+  <div class="calc-tabs">
+
+    <button class="calc-tab active"
+            data-calc-mode="math">
+      Математика
+    </button>
+
+    <button class="calc-tab"
+            data-calc-mode="physics">
+      Физика
+    </button>
+
+  </div>
+
+  <!-- МАТЕМАТИКА -->
+  <div id="mathMode">
+
+    <div id="mathDisplay" class="math-display">
+      0
+    </div>
+
+    <div id="mathKeys" class="math-keys">
+
+      <button data-key="AC">AC</button>
+      <button data-key="BACK">⌫</button>
+      <button data-key="%">%</button>
+      <button data-key="/">÷</button>
+
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button data-key="*">×</button>
+
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button data-key="-">−</button>
+
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button data-key="+">+</button>
+
+      <button data-key="SIGN">±</button>
+      <button data-key="0">0</button>
+      <button data-key=".">.</button>
+      <button data-key="=" class="equal">=</button>
+
+    </div>
+  </div>
+
+  <!-- ФИЗИКА -->
+  <div id="physicsMode" hidden>
+
+    <label class="field">
+      Қажетті формула
+
+      <select id="formulaSelect">
+        <option value="internal">
+          ΔU = Q − A
+        </option>
+
+        <option value="heat">
+          Q = ΔU + A
+        </option>
+
+        <option value="work">
+          A = Q − ΔU
+        </option>
+
+        <option value="pressureWork">
+          A = pΔV
+        </option>
+
+        <option value="volume">
+          ΔV = A/p
+        </option>
+
+        <option value="heating">
+          Q = cmΔt
+        </option>
+      </select>
+    </label>
+
+    <div id="physicsFields"></div>
+
+    <button id="physicsCalculate"
+            class="btn primary full">
+      Есептеу
+    </button>
+
+    <div id="physicsResult"
+         class="feedback"
+         aria-live="polite">
+      Мәліметтерді енгізіп, есептеу батырмасын бас.
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

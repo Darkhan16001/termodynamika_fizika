@@ -1,0 +1,1036 @@
+
+:root {
+  --bg: #081326;
+  --panel: #14243f;
+  --panel2: #203756;
+  --line: #3e5b80;
+  --white: #f0f6ff;
+  --muted: #b8cbe1;
+  --blue: #4e91ff;
+  --cyan: #76e8ff;
+  --green: #69e6b1;
+  --gold: #ffcf72;
+  --red: #f2778a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--white);
+  background:
+    radial-gradient(
+      circle at 8% 0%,
+      #20416b,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      #102f47,
+      transparent 40%
+    ),
+    var(--bg);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+}
+
+p,
+li {
+  color: #d9e7f7;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #88caff;
+  outline-offset: 2px;
+}
+
+/* ===================================
+   НЕГІЗГІ САЙТ
+=================================== */
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 265px;
+  gap: 20px;
+  max-width: 1650px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main {
+  min-width: 0;
+}
+
+/* ===================================
+   ЖОҒАРҒЫ БӨЛІМ
+=================================== */
+
+.hero {
+  padding: 45px 38px;
+  border: 1px solid #4f75a1;
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      #2867a6,
+      transparent 52%
+    ),
+    linear-gradient(
+      135deg,
+      #1a395e,
+      #101e35
+    );
+}
+
+.eyebrow {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 4.5vw, 62px);
+  margin: 18px 0 14px;
+}
+
+.hero p {
+  max-width: 770px;
+  font-size: 19px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.chips span {
+  border: 1px solid #ffffff38;
+  background: #ffffff17;
+  border-radius: 30px;
+  padding: 8px 13px;
+  font-size: 13px;
+}
+
+/* ===================================
+   БӨЛІМ ТАҚЫРЫБЫ
+=================================== */
+
+.heading {
+  margin: 33px 0 21px;
+}
+
+.heading > span {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.heading h2 {
+  margin: 7px 0;
+  font-size: clamp(27px, 3.3vw, 40px);
+}
+
+.heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ===================================
+   КАРТОЧКАЛАР
+=================================== */
+
+.card {
+  margin-bottom: 19px;
+  padding: 27px;
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  background:
+    linear-gradient(
+      145deg,
+      #182b48,
+      #101e34
+    );
+}
+
+.card h2 {
+  font-size: 27px;
+  margin: 0 0 16px;
+}
+
+.card h3 {
+  color: #a6d2ff;
+  font-size: 21px;
+  margin: 22px 0 9px;
+}
+
+.card p,
+.card li {
+  font-size: 17px;
+}
+
+.lead {
+  font-size: 19px !important;
+  color: #edf6ff !important;
+}
+
+.muted {
+  color: var(--muted) !important;
+  font-size: 14px !important;
+}
+
+.mini-title {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.formula {
+  margin: 20px 0;
+  padding: 19px;
+  background: #091c34;
+  color: #a2f0ff;
+  border-left: 5px solid var(--cyan);
+  border-radius: 12px;
+  font-size: clamp(21px, 3vw, 30px);
+  font-weight: 800;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.example {
+  margin: 20px 0;
+  padding: 19px;
+  background: #143b36;
+  border: 1px solid #438e81;
+  border-radius: 13px;
+}
+
+.example strong {
+  color: #8cf0c0;
+}
+
+.question-box {
+  margin-top: 18px;
+  padding: 18px;
+  background: #342c1e;
+  border: 1px solid #8e7847;
+  border-radius: 13px;
+}
+
+.question-box strong {
+  color: var(--gold);
+}
+
+.feedback {
+  padding: 17px;
+  margin: 17px 0;
+  border: 1px solid #4385a6;
+  border-radius: 12px;
+  background: #12364b;
+  color: #e4faff;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.success {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.warning {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+/* ===================================
+   СУРЕТТЕР
+=================================== */
+
+.diagram {
+  margin: 23px 0;
+  padding: 12px;
+  border: 1px solid #476784;
+  border-radius: 17px;
+  background: #081b30;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.diagram figcaption {
+  text-align: center;
+  color: #b9d5ed;
+  font-size: 14px;
+  padding: 10px 4px 2px;
+}
+
+/* ===================================
+   ПРОГРЕСС
+=================================== */
+
+.progress {
+  width: 100%;
+  height: 9px;
+  margin: 12px 0;
+  overflow: hidden;
+  background: #2a4260;
+  border-radius: 20px;
+}
+
+.progress > div {
+  height: 100%;
+  width: 0;
+  background:
+    linear-gradient(90deg, #4d8eff, #7ce9ff);
+  transition: width 0.25s ease;
+}
+
+/* ===================================
+   БАТЫРМАЛАР
+=================================== */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 1px solid #52739a;
+  border-radius: 11px;
+  background: #2c4567;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 750;
+  transition: filter 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.16);
+}
+
+.btn.primary {
+  background:
+    linear-gradient(135deg, #367fe8, #7455e8);
+  border: 0;
+}
+
+.btn.secondary {
+  background: #2d4666;
+}
+
+.btn.youtube {
+  background: #d83a50;
+  border: 0;
+}
+
+.btn.danger {
+  background: #8b344a;
+  border-color: #c66c81;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+/* ===================================
+   ОҢ ЖАҚ ПАНЕЛЬ
+=================================== */
+
+.sidebar {
+  position: sticky;
+  top: 14px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 88px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.side-card {
+  background: #152744f5;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.side-card h3 {
+  margin: 0 0 13px;
+  font-size: 17px;
+}
+
+.side-card small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.navigation {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 12px 11px;
+  background: #243b5b;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.nav-btn:hover {
+  background: #31547e;
+}
+
+.nav-btn.active {
+  background: #2a5da7;
+  border-color: #7fb7ff;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+.timer-card {
+  text-align: center;
+}
+
+#timer {
+  font-size: 43px;
+  font-weight: 900;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+
+#timerStatus {
+  display: block;
+  color: var(--muted);
+}
+
+.timer-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.timer-actions button {
+  flex: 1;
+  padding: 8px;
+  border: 0;
+  background: #304e71;
+  border-radius: 9px;
+}
+
+.controls {
+  display: grid;
+  gap: 9px;
+}
+
+.controls .btn {
+  width: 100%;
+}
+
+/* ===================================
+   КОНСПЕКТ
+=================================== */
+
+.note {
+  margin: 24px 0;
+  padding-left: 18px;
+  border-left: 3px solid #64a8ff;
+}
+
+.note h3 {
+  color: #a9d7ff;
+}
+
+.note p {
+  margin: 7px 0;
+}
+
+/* ===================================
+   ВИДЕО
+=================================== */
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #020611;
+  border: 1px solid #405979;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 21px 0;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===================================
+   ЕСЕПТЕР
+=================================== */
+
+.level-tabs,
+.round-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.tab {
+  padding: 10px 13px;
+  background: #294563;
+  border: 1px solid #51719b;
+  border-radius: 10px;
+}
+
+.tab.active {
+  background: #347bd8;
+  border-color: #89beff;
+}
+
+.field {
+  display: block;
+  margin: 14px 0;
+  color: #d2e2f5;
+  font-size: 15px;
+}
+
+.field input,
+.field select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px;
+  background: #091b31;
+  border: 1px solid #5a7ca3;
+  border-radius: 11px;
+  color: white;
+  font-size: 17px;
+}
+
+.task-list {
+  display: grid;
+  gap: 9px;
+}
+
+.task-item {
+  padding: 13px;
+  background: #203652;
+  border: 1px solid #405e81;
+  border-radius: 11px;
+}
+
+/* ===================================
+   3 КОМАНДА
+=================================== */
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+  margin: 17px 0;
+}
+
+.team-card {
+  background: #203755;
+  border: 1px solid #55759b;
+  border-radius: 15px;
+  padding: 16px 9px;
+  text-align: center;
+}
+
+.team-card input {
+  display: block;
+  width: 100%;
+  padding: 8px 3px;
+  margin: 10px 0;
+  border: 1px solid #597da4;
+  border-radius: 8px;
+  background: #10243e;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.team-card strong {
+  display: block;
+  color: var(--gold);
+  font-size: 43px;
+}
+
+.team-card small {
+  color: var(--muted);
+}
+
+/* ===================================
+   ОЙЫН ЖАУАПТАРЫ
+=================================== */
+
+.game-options {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.game-option {
+  display: block;
+  width: min(100%, 800px);
+  padding: 15px;
+  background: #284362;
+  border: 1px solid #527299;
+  border-radius: 11px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.game-option:hover:not(:disabled) {
+  background: #375a82;
+}
+
+.game-option.correct {
+  background: #176b4e;
+  border-color: #7cedba;
+}
+
+.game-option.wrong {
+  background: #7f394c;
+  border-color: #ff97a6;
+}
+
+.creative-task {
+  padding: 19px;
+  margin: 15px 0;
+  background: #223956;
+  border: 1px solid #537596;
+  border-radius: 14px;
+}
+
+.creative-task h3 {
+  margin-top: 0;
+}
+
+/* ===================================
+   ҚОРЫТЫНДЫ
+=================================== */
+
+.winner-banner {
+  text-align: center;
+  padding: 30px 18px;
+  background: #443920;
+  border: 2px solid #f3ce78;
+  border-radius: 17px;
+  color: #ffe5aa;
+  font-size: clamp(21px, 3vw, 30px);
+  font-weight: 800;
+}
+
+.podium {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.podium-card {
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 15px;
+  border: 1px solid #5b7a9c;
+  background: #223953;
+}
+
+.podium-card.first {
+  border-color: #f1d078;
+  background: #463a22;
+}
+
+.podium-card .medal {
+  font-size: 40px;
+}
+
+.podium-card h3 {
+  margin: 10px 0;
+  color: white;
+  overflow-wrap: anywhere;
+}
+
+.podium-card strong {
+  display: block;
+  font-size: 39px;
+  color: var(--gold);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 19px 0;
+}
+
+.results-table {
+  min-width: 800px;
+}
+
+td,
+th {
+  border: 1px solid #4b688b;
+  padding: 11px;
+  text-align: center;
+}
+
+th {
+  background: #264362;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.result-row strong {
+  color: #ffe29b;
+}
+
+/* ===================================
+   КАЛЬКУЛЯТОР
+=================================== */
+
+.calc-toggle {
+  position: fixed;
+  z-index: 999;
+  bottom: 16px;
+  right: 17px;
+  padding: 14px 18px;
+  border: 1px solid #94c5ff;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, #237be8, #7350e4);
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 9px 33px #0009;
+}
+
+.calc-panel {
+  position: fixed;
+  z-index: 1000;
+  right: 17px;
+  bottom: 80px;
+  width: min(365px, calc(100vw - 34px));
+  max-height: calc(100dvh - 100px);
+  overflow-y: auto;
+  padding: 18px;
+  background: #132540;
+  border: 1px solid #6387ae;
+  border-radius: 19px;
+  box-shadow: 0 20px 60px #000b;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-header h3 {
+  margin: 0;
+}
+
+.calc-header button {
+  padding: 8px 12px;
+  background: #354f70;
+  border: 0;
+  border-radius: 8px;
+}
+
+.calc-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 17px 0;
+}
+
+.calc-tab {
+  flex: 1;
+  padding: 10px;
+  background: #2b4565;
+  border: 1px solid #52759b;
+  border-radius: 9px;
+}
+
+.calc-tab.active {
+  background: #337ad9;
+}
+
+.math-display {
+  padding: 19px 12px;
+  margin-bottom: 12px;
+  background: #07172b;
+  border: 1px solid #42678e;
+  border-radius: 11px;
+  text-align: right;
+  font-size: 31px;
+  font-weight: 800;
+  color: #93efff;
+  overflow-x: auto;
+}
+
+.math-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.math-keys button {
+  min-height: 54px;
+  background: #304c6f;
+  border: 0;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.math-keys button:hover {
+  background: #416389;
+}
+
+.math-keys button.equal {
+  background: #3582ec;
+}
+
+/* ===================================
+   АСТЫҢҒЫ БӨЛІМ
+=================================== */
+
+footer {
+  text-align: center;
+  padding: 40px 0 20px;
+  color: #97aecb;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+/* ===================================
+   ТЕЛЕФОН МЕН ПЛАНШЕТ
+=================================== */
+
+@media (max-width: 850px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 9px;
+    padding: 9px;
+  }
+
+  .sidebar {
+    top: 9px;
+    max-height: calc(100vh - 85px);
+  }
+
+  .side-card {
+    padding: 9px 6px;
+  }
+
+  .side-card h3 {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .nav-btn {
+    justify-content: center;
+    padding: 10px 5px;
+  }
+
+  .nav-icon {
+    font-size: 21px;
+  }
+
+  .nav-label,
+  .controls .btn span {
+    display: none;
+  }
+
+  .controls .btn {
+    padding: 10px 5px;
+    font-size: 13px;
+  }
+
+  #timer {
+    font-size: 22px;
+  }
+
+  .timer-actions {
+    gap: 4px;
+  }
+
+  .timer-actions button {
+    padding: 6px 3px;
+  }
+
+  .hero {
+    padding: 23px 14px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 17px 13px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 15px;
+  }
+
+  .scoreboard {
+    gap: 5px;
+  }
+
+  .team-card {
+    padding: 9px 3px;
+  }
+
+  .team-card input {
+    padding: 5px 2px;
+    font-size: 10px;
+  }
+
+  .team-card strong {
+    font-size: 25px;
+  }
+
+  .podium {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-toggle {
+    right: 9px;
+    bottom: 9px;
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .calc-panel {
+    right: 9px;
+    bottom: 66px;
+    width: min(350px, calc(100vw - 18px));
+  }
+}
+
+/* ===================================
+   БАСЫП ШЫҒАРУ
+=================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .app {
+    display: block;
+  }
+
+  .sidebar,
+  .hero,
+  .heading,
+  .calc-toggle,
+  .calc-panel,
+  footer,
+  .actions {
+    display: none !important;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid #aaa;
+  }
+
+  .card p,
+  .card h2,
+  .card h3,
+  table,
+  td,
+  th {
+    color: black !important;
+  }
+
+  .podium-card,
+  .winner-banner {
+    background: white;
+    color: black;
+  }
+}
